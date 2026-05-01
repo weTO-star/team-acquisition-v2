@@ -207,6 +207,14 @@ p { margin: 0 0 0.8rem; color: var(--muted); }
   gap: 1rem;
 }
 
+.seo-stack {
+  gap: 1.1rem;
+}
+
+.seo-block p {
+  line-height: 1.75;
+}
+
 .form-grid {
   display: grid;
   gap: 0.9rem;
@@ -378,4 +386,12 @@ input:focus, select:focus, textarea:focus {
   }
   .ta-chat-box { right: 10px; width: min(330px, calc(100% - 12px)); }
   .ta-chat-welcome { right: 10px; max-width: 248px; }
+
+  .seo-block {
+    padding: 1rem;
+  }
+
+  .seo-block p {
+    line-height: 1.8;
+  }
 }
