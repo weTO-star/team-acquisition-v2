@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prospect | Team Acquisition</title>
+    <meta name="description" content="Close exclusive B2B mandates with Team Acquisition's strike-force outbound model." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/premium-pages.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar-wrap">
+        <a class="brand" href="../">
+          <span class="brand-logo" aria-hidden="true">
+            <svg viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="blueA" x1="0" x2="1">
+                  <stop offset="0%" stop-color="#0a254a" />
+                  <stop offset="100%" stop-color="#4f8dff" />
+                </linearGradient>
+                <linearGradient id="goldA" x1="0" x2="1">
+                  <stop offset="0%" stop-color="#a87d0a" />
+                  <stop offset="100%" stop-color="#d4af37" />
+                </linearGradient>
+              </defs>
+              <rect x="1.5" y="1.5" width="65" height="65" rx="14" fill="#071427" stroke="url(#goldA)" />
+              <path d="M14 47 L28 34 L37 40 L52 21" fill="none" stroke="url(#blueA)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M48 21 H53 V26" fill="none" stroke="#d4af37" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+          <span>Team Acquisition<small>Registered company in Madagascar</small></span>
+        </a>
+        <nav class="nav">
+          <a href="#model">Economic model</a>
+          <a href="#roi">ROI</a>
+          <a href="#form">Consultation</a>
+          <a class="btn btn-outline" href="../investors/">Investors</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div class="badge-row">
+          <span class="badge">Premium</span>
+          <span class="badge">Company</span>
+          <span class="badge">Strike Force</span>
+        </div>
+        <h1>Close Exclusive B2B Mandates - Without Hiring or Risk</h1>
+        <p class="subhead">
+          Team Acquisition (company registered in Madagascar) acts as your outsourced sales strike force.
+          We generate premium opportunities from European decision-makers. You pay only for qualified outcomes.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#form">Get my free pipeline audit -></a>
+          <a class="btn btn-secondary" href="#how">See how we work</a>
+        </div>
+      </section>
+
+      <section id="how">
+        <h2>Problem -> Solution</h2>
+        <div class="grid">
+          <article class="card"><p>European recruitment firms lose around 70% of their time searching for clients instead of recruiting.</p></article>
+          <article class="card"><p>Team Acquisition fixes this with elite offshore SDRs and a performance-first operating model.</p></article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Our Company Status</h2>
+        <div class="card">
+          <ul class="list">
+            <li>Team Acquisition is a registered company, not a freelancer.</li>
+            <li>Full compliance under Malagasy law, export services with 0% VAT treatment.</li>
+            <li>We provide invoices, contracts, and non-disclosure agreements.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="model">
+        <h2>Economic Model - Pure Sales</h2>
+        <div class="grid">
+          <article class="card"><p>No mandate signed = no payment.</p></article>
+          <article class="card"><p>50% upfront at mandate signature -> Team Acquisition takes 25% of total mandate value immediately.</p></article>
+          <article class="card"><p>Example: EUR15,000 mandate = EUR3,750 immediate revenue for Team Acquisition, with zero-risk setup for the client.</p></article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Offshore Advantage</h2>
+        <div class="grid">
+          <article class="card"><div class="kpi">EUR4,500/month</div><p>Typical SDR cost in France.</p></article>
+          <article class="card"><div class="kpi">EUR500/month</div><p>Typical SDR cost in Madagascar.</p></article>
+          <article class="card"><p>Same quality standards, same tools, significantly lower cost structure.</p></article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Social Proof - Team Structure</h2>
+        <div class="card">
+          <ul class="list">
+            <li>11 experts dedicated to performance</li>
+            <li>7 Business Developers (SDRs), 2 Data Sales Analysts, 1 Sales Ops Pilot, 1 CEO/Founder</li>
+            <li>Monthly payroll: EUR3,670</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="roi">
+        <h2>ROI Calculator</h2>
+        <div class="card calc">
+          <div class="calc-grid">
+            <div>
+              <label for="leads">Target leads per month</label>
+              <input id="leads" type="range" min="10" max="300" value="80" />
+              <div class="slider-line">Value: <span id="leadsValue">80</span></div>
+            </div>
+            <div>
+              <label for="conversion">Conversion rate (%)</label>
+              <input id="conversion" type="range" min="2" max="50" value="12" />
+              <div class="slider-line">Value: <span id="conversionValue">12%</span></div>
+            </div>
+            <div>
+              <label for="mandate">Average mandate value (EUR)</label>
+              <input id="mandate" type="range" min="1000" max="50000" step="500" value="15000" />
+              <div class="slider-line">Value: EUR <span id="mandateValue">15,000</span></div>
+            </div>
+          </div>
+          <div class="result-box" style="margin-top: 0.8rem;">
+            <p>Estimated monthly revenue generated: <strong id="estimatedRevenue">EUR0</strong></p>
+            <p>Team Acquisition immediate share estimate (25%): <strong id="teamAcqRevenue">EUR0</strong></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="form">
+        <h2>Prospect Form</h2>
+        <div class="card form-card">
+          <form id="prospectForm">
+            <div class="calc-grid">
+              <div><label for="fullName">Full name</label><input id="fullName" name="fullName" required /></div>
+              <div><label for="companyName">Company name</label><input id="companyName" name="companyName" required /></div>
+              <div><label for="email">Professional email</label><input id="email" name="email" type="email" required /></div>
+              <div><label for="phone">Phone number</label><input id="phone" name="phone" required /></div>
+              <div>
+                <label for="need">Main need</label>
+                <select id="need" name="need" required>
+                  <option value="">Select</option>
+                  <option>More mandates</option>
+                  <option>European expansion</option>
+                  <option>SDR team setup</option>
+                </select>
+              </div>
+              <div style="grid-column:1/-1;">
+                <label for="targetClients">Tell us about your target clients</label>
+                <textarea id="targetClients" name="targetClients" rows="4" required></textarea>
+              </div>
+            </div>
+            <p><label><input id="companyConsent" type="checkbox" name="companyConsent" required /> I understand Team Acquisition is a company, not a freelancer.</label></p>
+            <p><label><input type="checkbox" name="gdprConsent" required /> I consent to data processing (GDPR compliance).</label></p>
+            <button class="btn btn-primary btn-block" type="submit">Send my request - free consultation</button>
+            <p class="form-status fine-print"></p>
+          </form>
+          <p class="fine-print">Company status notice: Team Acquisition is a registered Malagasy legal entity.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>FAQ</h2>
+        <div class="grid">
+          <article class="card"><h3>Is Team Acquisition a registered company?</h3><p>Yes, legally registered in Madagascar.</p></article>
+          <article class="card"><h3>Do you sign NDAs?</h3><p>Yes, before data exchange.</p></article>
+          <article class="card"><h3>What countries do you target?</h3><p>France, Belgium, Switzerland, Luxembourg, Germany.</p></article>
+          <article class="card"><h3>How fast can you start?</h3><p>Within 2 weeks after mandate signature.</p></article>
+        </div>
+        <div class="cta-row">
+          <a href="#form" class="btn btn-primary">Boost my mandate pipeline</a>
+          <a href="#form" class="btn btn-secondary">Talk to our sales ops team</a>
+          <a href="#form" class="btn btn-outline">Receive our B2B case studies</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-wrap">
+        <p>Team Acquisition - Registered company in Madagascar</p>
+        <div class="cta-row">
+          <a class="li-icon" href="https://www.linkedin.com/in/wells-todison/" target="_blank" rel="noreferrer" aria-label="Wells LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M6.9 8A1.9 1.9 0 1 1 6.9 4.2 1.9 1.9 0 0 1 6.9 8zM5 9.5h3.8V20H5V9.5zM11 9.5h3.7V11h.1c.5-.9 1.7-1.9 3.6-1.9 3.8 0 4.5 2.5 4.5 5.8V20H19v-4.5c0-1.1 0-2.4-1.5-2.4s-1.8 1.2-1.8 2.3V20H11V9.5z"/></svg>
+          </a>
+          <a class="btn btn-outline" href="https://www.linkedin.com/company/team-acquisition" target="_blank" rel="noreferrer">Follow us on LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../assets/forms.js"></script>
+    <script src="../assets/site-ui.js"></script>
+    <script src="../assets/chatbot.js"></script>
+  </body>
+  </html>

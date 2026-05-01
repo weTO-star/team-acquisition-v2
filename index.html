@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TEAM Acquisition | High-Ticket B2B Client Acquisition</title>
+    <title>Team Acquisition | Choose Your Path</title>
     <meta
       name="description"
-      content="TEAM Acquisition helps B2B companies win premium clients through elite outbound systems, ROI engineering, and strategic execution."
+      content="Team Acquisition gateway: become a partner or become an investor."
     />
-    <meta property="og:title" content="TEAM Acquisition | High-Ticket B2B Client Acquisition" />
-    <meta property="og:description" content="Premium outbound infrastructure built for predictable high-value growth." />
+    <meta property="og:title" content="Team Acquisition | Choose Your Path" />
+    <meta property="og:description" content="A sales strike force. Two ways to join." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://t-acquisition.com/" />
     <meta property="og:image" content="./assets/og-cover.svg" />
@@ -25,7 +25,7 @@
   <body>
     <header class="site-header">
       <div class="container nav-wrap">
-        <a class="brand" href="#home" aria-label="TEAM Acquisition Home">
+        <a class="brand" href="./" aria-label="TEAM Acquisition Home">
           <span class="logo-mark" aria-hidden="true">
             <svg viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg">
               <defs>
@@ -49,142 +49,39 @@
           </span>
         </a>
         <nav class="nav-links">
-          <a href="#services">Services</a>
-          <a href="#roi">ROI</a>
-          <a href="#contact">Contact</a>
+          <a href="./prospect/">Become a partner</a>
+          <a href="./investors/">Become an investor</a>
         </nav>
-        <button class="btn btn-outline" data-scroll="#contact">Book Consultation</button>
+        <a class="btn btn-outline" href="./prospect/">Partner Access</a>
       </div>
     </header>
 
-    <main>
-      <section id="home" class="hero container reveal">
-        <p class="eyebrow">High-Ticket B2B Acquisition Engine</p>
-        <h1>We Build Outbound Systems That Close Premium Clients at Scale.</h1>
-        <p class="hero-copy">
-          From C-suite conversations to revenue-qualified meetings, TEAM Acquisition delivers a
-          precise, data-driven growth machine designed for serious B2B companies.
-        </p>
-        <div class="hero-actions">
-          <button class="btn btn-gold" data-scroll="#roi">See Your ROI Projection</button>
-          <a class="btn btn-dark" href="https://www.linkedin.com/in/wells-todison" target="_blank" rel="noreferrer">
-            Message Wells on LinkedIn
-          </a>
+    <main class="gateway-main">
+      <section id="home" class="container gateway-wrap">
+        <div class="gateway-hero">
+          <h1>Team Acquisition</h1>
+          <p class="gateway-subtitle">A sales strike force. Two ways to join.</p>
         </div>
-      </section>
 
-      <section id="services" class="container reveal">
-        <div class="section-head">
-          <p class="eyebrow">What We Deploy</p>
-          <h2>Acquisition Infrastructure for High-Value Growth</h2>
-        </div>
-        <div class="cards">
-          <article class="card">
-            <h3>C-Suite Outbound</h3>
-            <p>Targeted outreach that lands strategic calls with decision-makers.</p>
+        <div class="gateway-grid">
+          <article class="gateway-card">
+            <p class="gateway-icon" aria-hidden="true">🤝</p>
+            <h2>Become a partner</h2>
+            <p>
+              You are a European company? We secure exclusive mandates for you. Pay only for performance.
+            </p>
+            <a class="btn btn-gold" href="./prospect/">Become a partner →</a>
           </article>
-          <article class="card">
-            <h3>Data Precision</h3>
-            <p>Enriched lead mapping to prioritize the highest-intent accounts.</p>
-          </article>
-          <article class="card">
-            <h3>SDR Execution</h3>
-            <p>Elite offshore delivery with speed, quality, and continuity.</p>
+
+          <article class="gateway-card">
+            <p class="gateway-icon" aria-hidden="true">📈</p>
+            <h2>Become an investor</h2>
+            <p>
+              Looking for fast returns and equity in an industrialized project? ROI &lt; 6 months, tax advantage.
+            </p>
+            <a class="btn btn-outline" href="./investors/">Become an investor →</a>
           </article>
         </div>
-        <div class="company-cta">
-          <a class="btn btn-outline" href="https://www.linkedin.com/company/team-acquisition" target="_blank" rel="noreferrer">
-            Follow us on LinkedIn
-          </a>
-        </div>
-      </section>
-
-      <section id="roi" class="container reveal">
-        <div class="section-head">
-          <p class="eyebrow">Trust Through Numbers</p>
-          <h2>Premium ROI Calculator</h2>
-        </div>
-        <div class="calculator card">
-          <form id="roi-form" class="slider-form">
-            <div class="slider-card">
-              <label for="leadGoalRange">Monthly Lead Goal</label>
-              <input id="leadGoalRange" type="range" min="20" max="300" value="60" />
-              <div class="value-line"><span id="leadGoalValue">60</span> leads</div>
-            </div>
-
-            <div class="slider-card">
-              <label for="closeRateRange">Current Close Rate</label>
-              <input id="closeRateRange" type="range" min="2" max="40" value="12" />
-              <div class="value-line"><span id="closeRateValue">12</span>%</div>
-            </div>
-
-            <div class="slider-card">
-              <label for="contractRange">Average Contract Value</label>
-              <input id="contractRange" type="range" min="2000" max="50000" step="500" value="15000" />
-              <div class="value-line">$<span id="contractValue">15,000</span></div>
-            </div>
-
-            <button type="submit" class="btn btn-gold full-width">Run Strategic Analysis</button>
-          </form>
-
-          <div id="analysis-loader" class="loader hidden">
-            <p>Loading Strategic Analysis...</p>
-            <div class="loader-bar"></div>
-          </div>
-
-          <div id="roi-results" class="results hidden">
-            <div class="metrics">
-              <div class="metric">
-                <p>Current Monthly Revenue</p>
-                <strong id="baselineRevenue">$0</strong>
-              </div>
-              <div class="metric">
-                <p>Projected Monthly Revenue</p>
-                <strong id="optimizedRevenue">$0</strong>
-              </div>
-              <div class="metric">
-                <p>Projected Annual Growth</p>
-                <strong id="annualGrowth">$0</strong>
-              </div>
-            </div>
-
-            <form id="lead-capture-form" class="lead-form">
-              <h3>Get Your Full ROI Blueprint</h3>
-              <label for="leadEmail">Business Email</label>
-              <input id="leadEmail" type="email" required />
-              <button type="submit" class="btn btn-gold full-width">GET MY ROI NOW</button>
-            </form>
-
-            <a
-              id="linkedinDynamicBtn"
-              class="btn btn-outline"
-              href="https://www.linkedin.com/in/wells-todison/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Discuss this ROI with Wells on LinkedIn
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="container reveal">
-        <div class="section-head">
-          <p class="eyebrow">Ready to Scale</p>
-          <h2>Start the Conversation</h2>
-        </div>
-        <form id="appointment-form" class="card appointment-grid">
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" required />
-
-          <label for="email">Work Email</label>
-          <input id="email" name="email" type="email" required />
-
-          <label for="company">Company</label>
-          <input id="company" name="company" type="text" required />
-
-          <button type="submit" class="btn btn-gold full-width">Book My Executive Call</button>
-        </form>
       </section>
     </main>
 
@@ -204,6 +101,7 @@
       </div>
     </footer>
 
-    <script src="./app.js" defer></script>
+    <script src="./assets/site-ui.js" defer></script>
+    <script src="./assets/chatbot.js" defer></script>
   </body>
 </html>
