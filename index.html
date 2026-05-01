@@ -3,38 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Team Acquisition | Choose Your Path</title>
-    <meta
-      name="description"
-      content="Team Acquisition gateway: become a partner or become an investor."
-    />
-    <meta property="og:title" content="Team Acquisition | Choose Your Path" />
-    <meta property="og:description" content="A sales strike force. Two ways to join." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://t-acquisition.com/" />
-    <meta property="og:image" content="./assets/og-cover.svg" />
-    <link rel="canonical" href="https://t-acquisition.com/" />
+    <title>Team Acquisition | Strategic Platform</title>
+    <meta name="description" content="Futuristic multilingual business gateway for Team Acquisition." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/platform.css" />
   </head>
-  <body>
+  <body class="page-enter" data-page="index">
+    <canvas id="starfield"></canvas>
+    <div class="bg-overlay" aria-hidden="true"></div>
+
     <header class="site-header">
-      <div class="container nav-wrap">
-        <a class="brand" href="./" aria-label="TEAM Acquisition Home">
+      <div class="container nav-row">
+        <a class="brand" href="./" aria-label="Team Acquisition Home">
           <span class="logo-mark" aria-hidden="true">
             <svg viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <linearGradient id="blueA" x1="0" x2="1">
-                  <stop offset="0%" stop-color="#102a5c" />
+                  <stop offset="0%" stop-color="#0a254a" />
                   <stop offset="100%" stop-color="#4f8dff" />
                 </linearGradient>
                 <linearGradient id="goldA" x1="0" x2="1">
-                  <stop offset="0%" stop-color="#9f7711" />
+                  <stop offset="0%" stop-color="#a87d0a" />
                   <stop offset="100%" stop-color="#d4af37" />
                 </linearGradient>
               </defs>
@@ -44,64 +35,62 @@
             </svg>
           </span>
           <span>
-            <strong>TEAM Acquisition</strong>
-            <small>Elite Growth Engineering</small>
+            <span class="brand-name">TEAM Acquisition</span>
+            <small class="brand-sub" data-i18n="brand_sub">Strategic Growth Platform</small>
           </span>
         </a>
+
         <nav class="nav-links">
-          <a href="./prospect/">Become a partner</a>
-          <a href="./investors/">Become an investor</a>
+          <a href="./prospect/" data-i18n="nav_partner">Partner</a>
+          <a href="./investors/" data-i18n="nav_investor">Investor</a>
+          <a href="./login/" data-i18n="nav_login">Login</a>
         </nav>
-        <a class="btn btn-outline" href="./prospect/">Partner Access</a>
+
+        <div class="utility-toggles">
+          <button id="langToggle" class="toggle-btn" type="button">EN / FR</button>
+          <button id="themeToggle" class="toggle-btn" type="button">Dark 🌙</button>
+        </div>
       </div>
     </header>
 
-    <main class="gateway-main">
-      <section id="home" class="container gateway-wrap">
-        <div class="gateway-hero">
-          <h1>Team Acquisition</h1>
-          <p class="gateway-subtitle">A sales strike force. Two ways to join.</p>
-        </div>
+    <main>
+      <section class="hero container">
+        <h1 data-i18n="hero_title">Team Acquisition</h1>
+        <p data-i18n="hero_sub">A sales strike force. Two ways to join.</p>
+      </section>
 
-        <div class="gateway-grid">
-          <article class="gateway-card">
-            <p class="gateway-icon" aria-hidden="true">🤝</p>
-            <h2>Become a partner</h2>
-            <p>
-              You are a European company? We secure exclusive mandates for you. Pay only for performance.
+      <section class="container">
+        <div class="card-grid">
+          <article class="card">
+            <h2 data-i18n="card_partner_title">Become a partner</h2>
+            <p data-i18n="card_partner_desc">
+              You are a European company? We build strategic outbound momentum and secure exclusive B2B opportunities.
             </p>
-            <a class="btn btn-gold" href="./prospect/">Become a partner →</a>
+            <a class="btn btn-primary" href="./prospect/" data-i18n="card_partner_cta">Become a partner →</a>
           </article>
 
-          <article class="gateway-card">
-            <p class="gateway-icon" aria-hidden="true">📈</p>
-            <h2>Become an investor</h2>
-            <p>
-              Looking for fast returns and equity in an industrialized project? ROI &lt; 6 months, tax advantage.
+          <article class="card">
+            <h2 data-i18n="card_investor_title">Become an investor</h2>
+            <p data-i18n="card_investor_desc">
+              Looking for accelerated returns and equity exposure in a structured industrialization project?
             </p>
-            <a class="btn btn-outline" href="./investors/">Become an investor →</a>
+            <a class="btn btn-secondary" href="./investors/" data-i18n="card_investor_cta">Become an investor →</a>
           </article>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-wrap">
-        <p>© <span id="year"></span> TEAM Acquisition</p>
-        <div class="footer-links">
-          <a class="linkedin-icon" href="https://www.linkedin.com/in/wells-todison/" target="_blank" rel="noreferrer" aria-label="Wells LinkedIn">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M6.9 8A1.9 1.9 0 1 1 6.9 4.2 1.9 1.9 0 0 1 6.9 8zM5 9.5h3.8V20H5V9.5zM11 9.5h3.7V11h.1c.5-.9 1.7-1.9 3.6-1.9 3.8 0 4.5 2.5 4.5 5.8V20H19v-4.5c0-1.1 0-2.4-1.5-2.4s-1.8 1.2-1.8 2.3V20H11V9.5z"
-              />
-            </svg>
-          </a>
-          <a href="https://www.linkedin.com/company/team-acquisition" target="_blank" rel="noreferrer">Company LinkedIn</a>
+    <footer class="footer">
+      <div class="container footer-row">
+        <p>© <span id="year"></span> <span data-i18n="footer_company">Team Acquisition | Registered company in Madagascar</span></p>
+        <div class="nav-links">
+          <a href="https://www.linkedin.com/in/wells-todison/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://www.linkedin.com/company/team-acquisition" target="_blank" rel="noreferrer">Company</a>
         </div>
       </div>
     </footer>
 
-    <script src="./assets/site-ui.js" defer></script>
+    <script src="./assets/platform.js" defer></script>
     <script src="./assets/chatbot.js" defer></script>
   </body>
 </html>

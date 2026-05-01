@@ -4,222 +4,122 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Investors | Team Acquisition</title>
-    <meta name="description" content="Co-invest in Team Acquisition industrialization: equity, recurring distribution, and tax-efficient export model." />
+    <meta name="description" content="Investor access page for Team Acquisition strategic industrialization." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../assets/premium-pages.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/platform.css" />
   </head>
-  <body>
-    <header class="topbar">
-      <div class="container topbar-wrap">
+  <body class="page-enter" data-page="investors">
+    <canvas id="starfield"></canvas>
+    <div class="bg-overlay" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container nav-row">
         <a class="brand" href="../">
-          <span class="brand-logo" aria-hidden="true">
+          <span class="logo-mark" aria-hidden="true">
             <svg viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg">
               <defs>
-                <linearGradient id="blueA" x1="0" x2="1">
-                  <stop offset="0%" stop-color="#0a254a" />
-                  <stop offset="100%" stop-color="#4f8dff" />
-                </linearGradient>
-                <linearGradient id="goldA" x1="0" x2="1">
-                  <stop offset="0%" stop-color="#a87d0a" />
-                  <stop offset="100%" stop-color="#d4af37" />
-                </linearGradient>
+                <linearGradient id="blueA" x1="0" x2="1"><stop offset="0%" stop-color="#0a254a" /><stop offset="100%" stop-color="#4f8dff" /></linearGradient>
+                <linearGradient id="goldA" x1="0" x2="1"><stop offset="0%" stop-color="#a87d0a" /><stop offset="100%" stop-color="#d4af37" /></linearGradient>
               </defs>
               <rect x="1.5" y="1.5" width="65" height="65" rx="14" fill="#071427" stroke="url(#goldA)" />
               <path d="M14 47 L28 34 L37 40 L52 21" fill="none" stroke="url(#blueA)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
               <path d="M48 21 H53 V26" fill="none" stroke="#d4af37" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </span>
-          <span>Team Acquisition<small>Malagasy legal entity</small></span>
+          <span><span class="brand-name">TEAM Acquisition</span><small class="brand-sub" data-i18n="brand_sub">Investor Platform</small></span>
         </a>
-        <nav class="nav">
-          <a href="#opportunity">Opportunity</a>
-          <a href="#options">Investment</a>
-          <a href="#form">Due diligence</a>
-          <a class="btn btn-outline" href="../prospect/">Prospect page</a>
+
+        <nav class="nav-links">
+          <a href="../" data-i18n="nav_home">Home</a>
+          <a href="../prospect/" data-i18n="nav_partner">Partner</a>
+          <a href="../login/" data-i18n="nav_login">Login</a>
         </nav>
+
+        <div class="utility-toggles">
+          <button id="langToggle" class="toggle-btn" type="button">EN / FR</button>
+          <button id="themeToggle" class="toggle-btn" type="button">Dark 🌙</button>
+        </div>
       </div>
     </header>
 
-    <main class="container">
-      <section class="hero">
+    <main>
+      <section class="hero container">
         <div class="badge-row">
-          <span class="badge">Premium</span>
-          <span class="badge">Company</span>
-          <span class="badge">ROI &lt; 6 months</span>
-          <span class="badge">Launch June 2026</span>
+          <span class="badge" data-i18n="b1">Premium</span>
+          <span class="badge" data-i18n="b2">Company</span>
+          <span class="badge" data-i18n="b3">ROI-Focused</span>
         </div>
-        <h1>Co-Invest in Sales Outsourcing Industrialization - Equity, ROI &lt; 6 Months, Tax Advantage</h1>
-        <p class="subhead">
-          Team Acquisition (legal entity, Madagascar) opens its capital for EUR49,400.
-          Proven model, monthly recurring distribution, 0% VAT on exports.
-        </p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="#form">Request due-diligence package</a>
-          <a class="btn btn-secondary" href="#deck">Download full deck (PDF)</a>
+        <h1 data-i18n="hero_title">Co-Invest in Sales Outsourcing Industrialization</h1>
+        <p data-i18n="hero_sub">Team Acquisition is a registered legal entity in Madagascar, opening strategic investment access with structured governance and data-backed operations.</p>
+        <div class="utility-toggles" style="justify-content:center;">
+          <a class="btn btn-primary" href="#form" data-i18n="hero_cta_1">Request due-diligence package</a>
+          <a class="btn btn-secondary" href="mailto:w-todison@t-acquisition.com?subject=Strategic%20Investor%20Call" data-i18n="hero_cta_2">Schedule a strategic call</a>
         </div>
       </section>
 
-      <section id="opportunity">
-        <h2>The Opportunity</h2>
-        <div class="grid">
-          <article class="card"><p>European B2B companies pay around EUR4,500/month for local SDRs.</p></article>
-          <article class="card"><p>Team Acquisition delivers equivalent performance at around EUR500/month from Madagascar.</p></article>
-          <article class="card"><p>Margin capture potential: 89% gross.</p></article>
+      <section class="container">
+        <h2 data-i18n="op_title">Why This Opportunity</h2>
+        <div class="card-grid">
+          <article class="card"><p data-i18n="op_a">Strong market demand from European B2B operators seeking efficient growth execution.</p></article>
+          <article class="card"><p data-i18n="op_b">Industrial operating model designed for repeatability, control, and measurable outcomes.</p></article>
+          <article class="card"><p data-i18n="op_c">Infrastructure and talent strategy focused on durable margin performance.</p></article>
         </div>
       </section>
 
-      <section>
-        <h2>Our Company Status</h2>
+      <section class="container card">
+        <h2 data-i18n="sec_title">Governance & Security</h2>
+        <p data-i18n="sec_desc">Company-level governance, legal documentation, auditable books, and structured investor communication are core to the platform.</p>
+      </section>
+
+      <section id="form" class="container">
         <div class="card">
-          <ul class="list">
-            <li>Duly registered Malagasy company with compliant legal and banking structure.</li>
-            <li>Tax regime: 20% corporate income tax on profits.</li>
-            <li>VAT treatment: 0% on intellectual service exports.</li>
-            <li>Auditable books, contracts, and compliant invoicing.</li>
-          </ul>
-        </div>
-      </section>
-
-      <section>
-        <h2>Economic Model for Investors</h2>
-        <div class="grid">
-          <article class="card"><p>Mandate signed -> 50% upfront fee.</p></article>
-          <article class="card"><p>Team Acquisition takes 25% of total mandate value at signature.</p></article>
-          <article class="card"><p>Example: EUR15,000 mandate -> EUR3,750 immediate cash.</p></article>
-        </div>
-      </section>
-
-      <section>
-        <h2>Cost Structure</h2>
-        <div class="grid">
-          <article class="card"><div class="kpi">EUR3,670</div><p>Monthly payroll for 11 people</p></article>
-          <article class="card"><div class="kpi">~EUR5,000</div><p>Monthly operational costs (SaaS, office, energy, Starlink)</p></article>
-          <article class="card"><div class="kpi">EUR15,000</div><p>Blocked security provision (3-month runway)</p></article>
-        </div>
-      </section>
-
-      <section id="options">
-        <h2>Investment Options</h2>
-        <div class="grid">
-          <article class="card"><h3>Option A</h3><p>EUR49,400 single investor, negotiable equity starting at 20%.</p></article>
-          <article class="card"><h3>Option B</h3><p>2 x EUR24,700 co-investors, 10% equity each.</p></article>
-          <article class="card"><h3>Total Raise</h3><p>Target capital raised: EUR40,000 to EUR49,400.</p></article>
-        </div>
-      </section>
-
-      <section>
-        <h2>CAPEX &amp; OPEX Breakdown</h2>
-        <div class="grid">
-          <article class="card"><p>Hardware (PCs, screens, UPS): EUR14,200</p></article>
-          <article class="card"><p>Software licenses (annual): EUR14,200</p></article>
-          <article class="card"><p>Furniture &amp; local setup: EUR6,000</p></article>
-          <article class="card"><p>Security provision: EUR15,000</p></article>
-          <article class="card"><p><strong>Total: EUR49,400</strong></p></article>
-        </div>
-      </section>
-
-      <section>
-        <h2>Infrastructure</h2>
-        <div class="card">
-          <ul class="list">
-            <li>11 stations (i7, SSD, 16GB RAM), 22 screens (24").</li>
-            <li>Starlink satellite + fiber backup targeting 99.9% uptime.</li>
-            <li>11 APC UPS systems for 24/7 electrical protection.</li>
-          </ul>
-        </div>
-      </section>
-
-      <section>
-        <h2>Financial Simulation (7 mandates/month)</h2>
-        <div class="grid">
-          <article class="card"><p>Monthly revenue upfronts: EUR26,250</p></article>
-          <article class="card"><p>Operational costs: -EUR5,000</p></article>
-          <article class="card"><p>Tax provision (20%): -EUR4,250</p></article>
-          <article class="card"><p>Security reserve (10%): -EUR1,700</p></article>
-          <article class="card"><p><strong>Net distributable profit: EUR15,300/month</strong></p></article>
-        </div>
-      </section>
-
-      <section>
-        <h2>Distribution Phases</h2>
-        <div class="grid">
-          <article class="card"><h3>Phase 1 - Repayment</h3><p>80% investors / 20% CEO until capital return, expected 5-6 months.</p></article>
-          <article class="card"><h3>Phase 2 - Growth</h3><p>20% investors / 80% CEO after repayment, investor pool target around EUR3,100/month.</p></article>
-        </div>
-      </section>
-
-      <section>
-        <h2>Validation & Timeline</h2>
-        <div class="card">
-          <ul class="list">
-            <li>Equipment pre-ordered, team pre-selected.</li>
-            <li>Industrial launch target: June or July 2026.</li>
-            <li>Founder: Wells Todison, Antananarivo, Madagascar.</li>
-          </ul>
-        </div>
-      </section>
-
-      <section id="form">
-        <h2>Investor Form</h2>
-        <div class="card form-card">
-          <form id="investorForm">
-            <div class="calc-grid">
-              <div><label for="investorName">Full name</label><input id="investorName" name="fullName" required /></div>
-              <div><label for="investorEmail">Email</label><input id="investorEmail" name="email" type="email" required /></div>
-              <div><label for="investorPhone">Phone</label><input id="investorPhone" name="phone" required /></div>
-              <div>
-                <label for="investorType">Investor type</label>
-                <select id="investorType" name="investorType" required>
-                  <option value="">Select</option>
-                  <option>Angel</option>
-                  <option>Fund</option>
-                  <option>Family office</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div>
-                <label for="amount">Investment amount</label>
-                <select id="amount" name="investmentAmount" required>
-                  <option value="">Select</option>
-                  <option>EUR24,700</option>
-                  <option>EUR49,400</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div style="grid-column:1/-1;">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-              </div>
-            </div>
-            <p><label><input id="gdprInvestor" name="gdprConsent" type="checkbox" required /> I consent to data processing and understand Team Acquisition is a company, not a freelancer.</label></p>
-            <button class="btn btn-primary btn-block" type="submit">Request due-diligence package</button>
-            <p class="form-status fine-print"></p>
+          <h2 data-i18n="form_title">Investor Expression of Interest</h2>
+          <form id="investorForm" class="form-grid">
+            <label><span data-i18n="f_name">Full name</span><input id="investorName" name="fullName" required /></label>
+            <label><span data-i18n="f_email">Email</span><input id="investorEmail" name="email" type="email" required /></label>
+            <label><span data-i18n="f_phone">Phone</span><input id="investorPhone" name="phone" required /></label>
+            <label>
+              <span data-i18n="f_type">Investor type</span>
+              <select id="investorType" name="investorType" required>
+                <option value="" data-i18n="f_type_0">Select</option>
+                <option data-i18n="f_type_1">Angel</option>
+                <option data-i18n="f_type_2">Fund</option>
+                <option data-i18n="f_type_3">Family office</option>
+                <option data-i18n="f_type_4">Other</option>
+              </select>
+            </label>
+            <label>
+              <span data-i18n="f_amount">Investment range</span>
+              <select id="amount" name="investmentAmount" required>
+                <option value="" data-i18n="f_amount_0">Select</option>
+                <option data-i18n="f_amount_1">EUR24,700</option>
+                <option data-i18n="f_amount_2">EUR49,400</option>
+                <option data-i18n="f_amount_3">Custom amount</option>
+              </select>
+            </label>
+            <label class="full"><span data-i18n="f_msg">Message</span><textarea id="message" name="message" rows="4" required></textarea></label>
+            <label class="full"><input id="gdprInvestor" name="gdprConsent" type="checkbox" required /> <span data-i18n="f_consent">I consent to data processing and understand Team Acquisition is a company, not a freelancer.</span></label>
+            <button class="btn btn-primary full" type="submit" data-i18n="f_submit">Request due-diligence package</button>
+            <p class="form-status full"></p>
           </form>
-          <div class="cta-row" id="deck">
-            <a class="btn btn-outline" href="mailto:w-todison@t-acquisition.com?subject=Full%20Investor%20Deck%20Request">Download full deck (PDF)</a>
-            <a class="btn btn-secondary" href="mailto:w-todison@t-acquisition.com?subject=Investor%20Call%20Request">Schedule a call with Wells</a>
-            <a class="btn btn-secondary" href="mailto:w-todison@t-acquisition.com?subject=Data%20Room%20Access%20Request">Get the data room access</a>
-          </div>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <div class="container footer-wrap">
-        <p>Team Acquisition - Registered Malagasy company | Antananarivo</p>
-        <div class="cta-row">
-          <a class="li-icon" href="https://www.linkedin.com/in/wells-todison/" target="_blank" rel="noreferrer" aria-label="Wells LinkedIn">
-            <svg viewBox="0 0 24 24"><path d="M6.9 8A1.9 1.9 0 1 1 6.9 4.2 1.9 1.9 0 0 1 6.9 8zM5 9.5h3.8V20H5V9.5zM11 9.5h3.7V11h.1c.5-.9 1.7-1.9 3.6-1.9 3.8 0 4.5 2.5 4.5 5.8V20H19v-4.5c0-1.1 0-2.4-1.5-2.4s-1.8 1.2-1.8 2.3V20H11V9.5z"/></svg>
-          </a>
-          <a class="btn btn-outline" href="https://www.linkedin.com/company/team-acquisition" target="_blank" rel="noreferrer">Follow us on LinkedIn</a>
+      <div class="container footer-row">
+        <p>© <span id="year"></span> <span data-i18n="footer_company">Team Acquisition | Registered Malagasy company</span></p>
+        <div class="nav-links">
+          <a href="https://www.linkedin.com/in/wells-todison/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://www.linkedin.com/company/team-acquisition" target="_blank" rel="noreferrer">Company</a>
         </div>
       </div>
     </footer>
 
-    <script src="../assets/forms.js"></script>
-    <script src="../assets/site-ui.js"></script>
-    <script src="../assets/chatbot.js"></script>
+    <script src="../assets/forms.js" defer></script>
+    <script src="../assets/platform.js" defer></script>
+    <script src="../assets/chatbot.js" defer></script>
   </body>
-  </html>
+</html>

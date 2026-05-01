@@ -60,7 +60,7 @@
   var wrap = document.createElement("div");
   wrap.innerHTML =
     '<button id="ta-chat-toggle" class="ta-chat-toggle" aria-label="Open chat">💬</button>' +
-    '<div id="ta-chat-welcome" class="ta-chat-welcome">Hello! How can I assist your acquisition strategy today?</div>' +
+    '<div id="ta-chat-welcome" class="ta-chat-welcome"></div>' +
     '<section id="ta-chat-box" class="ta-chat-box">' +
     '<header class="ta-chat-header">Team Acquisition Assistant</header>' +
     '<div id="ta-chat-log" class="ta-chat-log"></div>' +
@@ -104,7 +104,15 @@
   sendBtn.addEventListener("click", submitMsg);
   input.addEventListener("keydown", function (e) { if (e.key === "Enter") submitMsg(); });
 
+  function getWelcomeMessage() {
+    var lang = document.documentElement.lang === "fr" ? "fr" : "en";
+    return lang === "fr"
+      ? "Bonjour ! Comment puis-je accompagner votre strategie d'acquisition aujourd'hui ?"
+      : "Hello! How can I assist your acquisition strategy today?";
+  }
+
   window.setTimeout(function () {
+    welcome.textContent = getWelcomeMessage();
     subtlePing();
     welcome.classList.add("show");
   }, 120000);

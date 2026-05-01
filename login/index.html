@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Partner Login | Team Acquisition</title>
+    <meta name="description" content="Partner access portal for Team Acquisition." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/platform.css" />
+  </head>
+  <body class="page-enter" data-page="login">
+    <canvas id="starfield"></canvas>
+    <div class="bg-overlay" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container nav-row">
+        <a class="brand" href="../">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="blueA" x1="0" x2="1"><stop offset="0%" stop-color="#0a254a" /><stop offset="100%" stop-color="#4f8dff" /></linearGradient>
+                <linearGradient id="goldA" x1="0" x2="1"><stop offset="0%" stop-color="#a87d0a" /><stop offset="100%" stop-color="#d4af37" /></linearGradient>
+              </defs>
+              <rect x="1.5" y="1.5" width="65" height="65" rx="14" fill="#071427" stroke="url(#goldA)" />
+              <path d="M14 47 L28 34 L37 40 L52 21" fill="none" stroke="url(#blueA)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M48 21 H53 V26" fill="none" stroke="#d4af37" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+          <span><span class="brand-name">TEAM Acquisition</span><small class="brand-sub" data-i18n="brand_sub">Partner Access</small></span>
+        </a>
+
+        <nav class="nav-links">
+          <a href="../" data-i18n="nav_home">Home</a>
+          <a href="../prospect/" data-i18n="nav_partner">Partner</a>
+          <a href="../investors/" data-i18n="nav_investor">Investor</a>
+        </nav>
+
+        <div class="utility-toggles">
+          <button id="langToggle" class="toggle-btn" type="button">EN / FR</button>
+          <button id="themeToggle" class="toggle-btn" type="button">Dark 🌙</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="container hero">
+        <h1 data-i18n="hero_title">Partner Login</h1>
+        <p data-i18n="hero_sub">Secure access to your strategic workspace.</p>
+      </section>
+
+      <section class="container" style="max-width: 560px;">
+        <div class="card">
+          <form class="stack">
+            <label>
+              <span data-i18n="f_email">Email</span>
+              <input type="email" required />
+            </label>
+            <label>
+              <span data-i18n="f_password">Password</span>
+              <input type="password" required />
+            </label>
+            <label><input type="checkbox" /> <span data-i18n="remember">Remember me</span></label>
+            <a href="mailto:w-todison@t-acquisition.com?subject=Password%20Reset" data-i18n="forgot">Forgot password?</a>
+            <button class="btn btn-primary" type="button" data-i18n="login_btn">Partner Access</button>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/wells-todison/" target="_blank" rel="noreferrer" data-i18n="linkedin_btn">Login with LinkedIn</a>
+            <a class="btn btn-secondary" href="../prospect/" data-i18n="create_btn">Create an account</a>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-row">
+        <p>© <span id="year"></span> <span data-i18n="footer_company">Team Acquisition | Registered company in Madagascar</span></p>
+      </div>
+    </footer>
+
+    <script src="../assets/platform.js" defer></script>
+    <script src="../assets/chatbot.js" defer></script>
+  </body>
+</html>
