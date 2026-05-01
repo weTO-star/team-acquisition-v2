@@ -9,6 +9,7 @@
         nav_partner: "Partner",
         nav_investor: "Investor",
         nav_login: "Login",
+        nav_cta: "Talk to an expert",
         brand_sub: "Strategic Growth Platform",
         hero_title: "Team Acquisition",
         hero_sub: "A sales strike force. Two ways to join.",
@@ -24,6 +25,7 @@
         nav_partner: "Partenaire",
         nav_investor: "Investisseur",
         nav_login: "Connexion",
+        nav_cta: "Parler à un expert",
         brand_sub: "Plateforme de croissance stratégique",
         hero_title: "Team Acquisition",
         hero_sub: "Une strike force commerciale. Deux façons de nous rejoindre.",
@@ -41,6 +43,7 @@
         nav_home: "Home",
         nav_investor: "Investors",
         nav_login: "Login",
+        nav_cta: "Talk to an expert",
         brand_sub: "Partner Platform",
         badge_1: "Premium",
         badge_2: "Company",
@@ -52,6 +55,13 @@
         hero_cta_primary: "Start partner discussion",
         hero_cta_secondary: "Explore activation journey",
         journey_title: "The Strategic Activation Journey",
+        solutions_title: "Our Solutions",
+        sol_1_title: "Strategic Engagement",
+        sol_1_desc: "A robust fixed foundation covering targeting architecture, campaign engineering, and operational governance.",
+        sol_2_title: "Shared Success",
+        sol_2_desc: "A variable performance layer tied to measurable outcomes, aligned with your growth trajectory.",
+        sol_3_title: "Executive Visibility",
+        sol_3_desc: "Continuous reporting and optimization cycles to preserve decision-making clarity at every stage.",
         j1_title: "Strategy Alignment",
         j1_desc: "We structure your business scope, targeting criteria, and strategic priorities for precision execution.",
         j2_title: "Lead Generation Activation",
@@ -86,6 +96,7 @@
         nav_home: "Accueil",
         nav_investor: "Investisseurs",
         nav_login: "Connexion",
+        nav_cta: "Parler à un expert",
         brand_sub: "Plateforme Partenaire",
         badge_1: "Premium",
         badge_2: "Entreprise",
@@ -97,6 +108,13 @@
         hero_cta_primary: "Démarrer une discussion partenaire",
         hero_cta_secondary: "Explorer le parcours d'activation",
         journey_title: "Parcours Partenaire - Exécution Continue",
+        solutions_title: "Nos Solutions",
+        sol_1_title: "Engagement Stratégique",
+        sol_1_desc: "Un socle fixe robuste couvrant l'architecture de ciblage, l'ingénierie de campagne et la gouvernance opérationnelle.",
+        sol_2_title: "Succès Partagé",
+        sol_2_desc: "Une couche variable orientée performance, corrélée à des résultats mesurables et alignée sur votre trajectoire de croissance.",
+        sol_3_title: "Pilotage Exécutif",
+        sol_3_desc: "Un reporting continu et des cycles d'optimisation pour maintenir une visibilité décisionnelle à chaque étape.",
         j1_title: "Alignement Stratégique",
         j1_desc: "Nous structurons le cadrage business, les critères de ciblage et les priorités d'acquisition.",
         j2_title: "Activation Lead Generation",
@@ -133,6 +151,7 @@
         nav_home: "Home",
         nav_partner: "Partner",
         nav_login: "Login",
+        nav_cta: "Talk to an expert",
         brand_sub: "Investor Platform",
         b1: "Premium",
         b2: "Company",
@@ -171,6 +190,7 @@
         nav_home: "Accueil",
         nav_partner: "Partenaire",
         nav_login: "Connexion",
+        nav_cta: "Parler à un expert",
         brand_sub: "Plateforme Investisseur",
         b1: "Premium",
         b2: "Entreprise",
@@ -211,6 +231,7 @@
         nav_home: "Home",
         nav_partner: "Partner",
         nav_investor: "Investor",
+        nav_cta: "Talk to an expert",
         brand_sub: "Partner Access",
         hero_title: "Partner Login",
         hero_sub: "Secure access to your strategic workspace.",
@@ -227,6 +248,7 @@
         nav_home: "Accueil",
         nav_partner: "Partenaire",
         nav_investor: "Investisseur",
+        nav_cta: "Parler à un expert",
         brand_sub: "Accès Partenaire",
         hero_title: "Connexion Partenaire",
         hero_sub: "Accès sécurisé à votre espace stratégique.",
@@ -380,6 +402,15 @@
   function initMisc() {
     var y = document.getElementById("year");
     if (y) y.textContent = String(new Date().getFullYear());
+    var header = document.querySelector(".site-header");
+    if (header) {
+      var updateHeader = function () {
+        if (window.scrollY > 12) header.classList.add("is-solid");
+        else header.classList.remove("is-solid");
+      };
+      updateHeader();
+      window.addEventListener("scroll", updateHeader, { passive: true });
+    }
     document.body.classList.add("page-ready");
   }
 
