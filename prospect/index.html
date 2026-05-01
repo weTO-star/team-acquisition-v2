@@ -1,126 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0; url=../partenaire/" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prospect | Team Acquisition</title>
-    <meta name="description" content="Partner with Team Acquisition's strategic sales strike force." />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../assets/platform.css" />
+    <title>Redirection | Team Acquisition</title>
+    <script>window.location.replace("../partenaire/");</script>
   </head>
-  <body class="page-enter" data-page="prospect">
-    <canvas id="starfield"></canvas>
-    <div class="bg-overlay" aria-hidden="true"></div>
-
-    <header class="site-header">
-      <div class="container nav-row">
-        <a class="brand" href="../">
-          <span class="logo-mark" aria-hidden="true">
-            <svg viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="blueA" x1="0" x2="1"><stop offset="0%" stop-color="#0a254a" /><stop offset="100%" stop-color="#4f8dff" /></linearGradient>
-                <linearGradient id="goldA" x1="0" x2="1"><stop offset="0%" stop-color="#a87d0a" /><stop offset="100%" stop-color="#d4af37" /></linearGradient>
-              </defs>
-              <rect x="1.5" y="1.5" width="65" height="65" rx="14" fill="#071427" stroke="url(#goldA)" />
-              <path d="M14 47 L28 34 L37 40 L52 21" fill="none" stroke="url(#blueA)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M48 21 H53 V26" fill="none" stroke="#d4af37" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </span>
-          <span><span class="brand-name">TEAM Acquisition</span><small class="brand-sub" data-i18n="brand_sub">Partner Platform</small></span>
-        </a>
-
-        <nav class="nav-links">
-          <a href="../" data-i18n="nav_home">Home</a>
-          <a href="../investors/" data-i18n="nav_investor">Investors</a>
-          <a href="../login/" data-i18n="nav_login">Login</a>
-        </nav>
-
-        <div class="utility-toggles">
-          <button id="langToggle" class="toggle-btn" type="button">EN / FR</button>
-          <button id="themeToggle" class="toggle-btn" type="button">Dark 🌙</button>
-        </div>
-      </div>
-    </header>
-
-    <main>
-      <section class="hero container">
-        <div class="badge-row">
-          <span class="badge" data-i18n="badge_1">Premium</span>
-          <span class="badge" data-i18n="badge_2">Company</span>
-          <span class="badge" data-i18n="badge_3">Strategic Strike Force</span>
-        </div>
-        <h1 data-i18n="hero_title">Join an Elite Strategic Sales Strike Force</h1>
-        <p data-i18n="hero_sub">
-          Team Acquisition is a registered company in Madagascar. We align strategy, outbound execution, and market positioning to help European businesses scale with confidence.
-        </p>
-        <div class="utility-toggles" style="justify-content:center;">
-          <a class="btn btn-primary" href="#form" data-i18n="hero_cta_primary">Start partner discussion</a>
-          <a class="btn btn-secondary" href="#journey" data-i18n="hero_cta_secondary">Explore activation journey</a>
-        </div>
-      </section>
-
-      <section id="journey" class="container stack">
-        <h2 data-i18n="journey_title">The Strategic Activation Journey</h2>
-        <div class="carousel-shell">
-          <div class="carousel-track">
-            <article class="card journey-card"><h3 data-i18n="j1_title">Strategy Alignment</h3><p data-i18n="j1_desc">We map your ideal client profile and strategic priority targets.</p></article>
-            <article class="card journey-card"><h3 data-i18n="j2_title">Lead Generation Activation</h3><p data-i18n="j2_desc">Your outreach engine is activated with premium data and messaging precision.</p></article>
-            <article class="card journey-card"><h3 data-i18n="j3_title">Strategic Sales Strike</h3><p data-i18n="j3_desc">Focused multichannel execution converts target accounts into warm conversations.</p></article>
-            <article class="card journey-card"><h3 data-i18n="j4_title">Shared Growth & Success</h3><p data-i18n="j4_desc">We optimize continuously to secure durable, high-quality pipeline growth.</p></article>
-            <article class="card journey-card"><h3 data-i18n="j1_title">Strategy Alignment</h3><p data-i18n="j1_desc">We map your ideal client profile and strategic priority targets.</p></article>
-            <article class="card journey-card"><h3 data-i18n="j2_title">Lead Generation Activation</h3><p data-i18n="j2_desc">Your outreach engine is activated with premium data and messaging precision.</p></article>
-            <article class="card journey-card"><h3 data-i18n="j3_title">Strategic Sales Strike</h3><p data-i18n="j3_desc">Focused multichannel execution converts target accounts into warm conversations.</p></article>
-            <article class="card journey-card"><h3 data-i18n="j4_title">Shared Growth & Success</h3><p data-i18n="j4_desc">We optimize continuously to secure durable, high-quality pipeline growth.</p></article>
-          </div>
-        </div>
-      </section>
-
-      <section class="container card">
-        <h2 data-i18n="sec_illus_title">Data + Human Precision</h2>
-        <p data-i18n="sec_illus_desc">Futuristic workflows blend data intelligence, business strategy, and trained human teams for consistent execution quality.</p>
-      </section>
-
-      <section id="form" class="container">
-        <div class="card">
-          <h2 data-i18n="form_title">Partner Application</h2>
-          <form id="prospectForm" class="form-grid">
-            <label><span data-i18n="f_name">Full name</span><input id="fullName" name="fullName" required /></label>
-            <label><span data-i18n="f_company">Company name</span><input id="companyName" name="companyName" required /></label>
-            <label><span data-i18n="f_email">Professional email</span><input id="email" name="email" type="email" required /></label>
-            <label><span data-i18n="f_phone">Phone number</span><input id="phone" name="phone" required /></label>
-            <label>
-              <span data-i18n="f_need">Main objective</span>
-              <select id="need" name="need" required>
-                <option value="" data-i18n="f_need_opt0">Select</option>
-                <option data-i18n="f_need_opt1">Strategic growth acceleration</option>
-                <option data-i18n="f_need_opt2">European market expansion</option>
-                <option data-i18n="f_need_opt3">Sales strike force setup</option>
-              </select>
-            </label>
-            <label class="full"><span data-i18n="f_target">Describe your target clients</span><textarea id="targetClients" name="targetClients" rows="4" required></textarea></label>
-            <label class="full"><input id="companyConsent" type="checkbox" name="companyConsent" required /> <span data-i18n="f_consent_company">I understand Team Acquisition is a company, not a freelancer.</span></label>
-            <label class="full"><input type="checkbox" name="gdprConsent" required /> <span data-i18n="f_consent_gdpr">I consent to data processing (GDPR compliant).</span></label>
-            <button class="btn btn-primary full" type="submit" data-i18n="f_submit">Send my request - strategic consultation</button>
-            <p class="form-status full"></p>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="container footer-row">
-        <p>© <span id="year"></span> <span data-i18n="footer_company">Team Acquisition | Registered company in Madagascar</span></p>
-        <div class="nav-links">
-          <a href="https://www.linkedin.com/in/wells-todison/" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="https://www.linkedin.com/company/team-acquisition" target="_blank" rel="noreferrer">Company</a>
-        </div>
-      </div>
-    </footer>
-
-    <script src="../assets/forms.js" defer></script>
-    <script src="../assets/platform.js" defer></script>
-    <script src="../assets/chatbot.js" defer></script>
+  <body>
+    <p>Redirection vers <a href="../partenaire/">/partenaire/</a>...</p>
   </body>
 </html>

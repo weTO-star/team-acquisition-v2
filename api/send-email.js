@@ -11,7 +11,7 @@ export default async function handler(req, res) {
 
     const resendApiKey = process.env.RESEND_API_KEY;
     const fromEmail = process.env.FROM_EMAIL || "no-reply@t-acquisition.com";
-    const toEmail = "w-todison@t-acquisition.com";
+    const toEmail = "t-wells@t-acquisition.com";
 
     if (!resendApiKey) {
       return res.status(500).json({ error: "Missing RESEND_API_KEY environment variable" });

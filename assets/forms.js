@@ -62,7 +62,7 @@
       prospect.addEventListener("submit", async function (e) {
         e.preventDefault();
         if (!validateCheckbox(prospect, "companyConsent", "Please confirm company status and consent.")) return;
-        try { await submitForm(prospect, "prospect"); } catch (err) { alert("Submission error. Please email w-todison@t-acquisition.com"); }
+        try { await submitForm(prospect, "prospect"); } catch (err) { alert("Submission error. Please try again in a moment."); }
       });
     }
     const investor = byId("investorForm");
@@ -70,7 +70,7 @@
       investor.addEventListener("submit", async function (e) {
         e.preventDefault();
         if (!validateCheckbox(investor, "gdprInvestor", "Please consent before submitting.")) return;
-        try { await submitForm(investor, "investor"); } catch (err) { alert("Submission error. Please email w-todison@t-acquisition.com"); }
+        try { await submitForm(investor, "investor"); } catch (err) { alert("Submission error. Please try again in a moment."); }
       });
     }
   }
