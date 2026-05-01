@@ -1,0 +1,138 @@
+const qs = (selector) => document.querySelector(selector);
+const qsa = (selector) => Array.from(document.querySelectorAll(selector));
+
+function formatCurrency(value) {
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    maximumFractionDigits: 0,
+  }).format(value);
+}
+
+function setActiveStep(step) {
+  qsa(".step").forEach((el) => {
+    el.classList.toggle("active", Number(el.dataset.step) === step);
+  });
+}
+
+function calculateROI({ leadGoal, closeRate, contractValue }) {
+  const improvedCloseRate = closeRate * 1.35;
+  const baselineMonthlyRevenue = leadGoal * (closeRate / 100) * contractValue;
+  const optimizedMonthlyRevenue = leadGoal * (improvedCloseRate / 100) * contractValue;
+  const annualGrowth = (optimizedMonthlyRevenue - baselineMonthlyRevenue) * 12;
+
+  return {
+    baselineMonthlyRevenue: Math.round(baselineMonthlyRevenue),
+    optimizedMonthlyRevenue: Math.round(optimizedMonthlyRevenue),
+    annualGrowth: Math.round(annualGrowth),
+  };
+}
+
+function setupRevealOnScroll() {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  qsa(".reveal").forEach((section) => observer.observe(section));
+}
+
+function setupSmoothScrollButtons() {
+  qsa("[data-scroll]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const target = button.getAttribute("data-scroll");
+      if (!target) return;
+      const section = qs(target);
+      if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+}
+
+function setupROICalculator() {
+  const form = qs("#roi-form");
+  const loader = qs("#analysis-loader");
+  const results = qs("#roi-results");
+  const baselineEl = qs("#baselineRevenue");
+  const optimizedEl = qs("#optimizedRevenue");
+  const annualEl = qs("#annualGrowth");
+  const linkedinBtn = qs("#linkedinDynamicBtn");
+
+  let latestRoi = { annualGrowth: 0 };
+
+  form?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const leadGoal = Number(qs("#leadGoal")?.value || 0);
+    const closeRate = Number(qs("#closeRate")?.value || 0);
+    const contractValue = Number(qs("#contractValue")?.value || 0);
+
+    const roi = calculateROI({ leadGoal, closeRate, contractValue });
+    latestRoi = roi;
+
+    setActiveStep(2);
+    loader?.classList.remove("hidden");
+    results?.classList.add("hidden");
+
+    window.setTimeout(() => {
+      setActiveStep(3);
+      loader?.classList.add("hidden");
+      results?.classList.remove("hidden");
+      if (baselineEl) baselineEl.textContent = formatCurrency(roi.baselineMonthlyRevenue);
+      if (optimizedEl) optimizedEl.textContent = formatCurrency(roi.optimizedMonthlyRevenue);
+      if (annualEl) annualEl.textContent = formatCurrency(roi.annualGrowth);
+
+      const prefilledMessage = encodeURIComponent(
+        `Hi Wells, I just calculated a potential ${formatCurrency(roi.annualGrowth)} annual growth on t-acquisition.com.`
+      );
+      if (linkedinBtn) {
+        linkedinBtn.href = `https://www.linkedin.com/in/wells-todison/?message=${prefilledMessage}`;
+      }
+    }, 2000);
+  });
+
+  qs("#lead-capture-form")?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const email = qs("#leadEmail")?.value || "";
+    const linkedin = qs("#leadLinkedin")?.value || "";
+
+    const leadPayload = {
+      source: "roi-calculator",
+      email,
+      linkedin,
+      roi: latestRoi,
+      timestamp: new Date().toISOString(),
+    };
+
+    console.info("lead-capture-ready", leadPayload);
+    window.alert("Your premium growth report request is captured. Our team will contact you shortly.");
+  });
+}
+
+function setupAppointmentForm() {
+  const form = qs("#appointment-form");
+  form?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const payload = Object.fromEntries(new FormData(form).entries());
+    payload.timestamp = new Date().toISOString();
+    console.info("appointment-ready", payload);
+    window.alert("Executive consultation request received.");
+    form.reset();
+  });
+}
+
+function setupStaticMetadata() {
+  const year = qs("#year");
+  if (year) year.textContent = String(new Date().getFullYear());
+}
+
+setupRevealOnScroll();
+setupSmoothScrollButtons();
+setupROICalculator();
+setupAppointmentForm();
+setupStaticMetadata();

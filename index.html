@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TEAM Acquisition | Elite B2B Lead Generation Engine</title>
+    <meta
+      name="description"
+      content="TEAM Acquisition builds premium B2B outbound engines with SDR Hub Madagascar execution, elite targeting, and ROI-focused lead generation."
+    />
+    <meta
+      name="keywords"
+      content="B2B lead generation, outbound sales, SDR as a service, sales pipeline, TEAM Acquisition"
+    />
+    <meta name="author" content="TEAM Acquisition" />
+    <meta property="og:title" content="TEAM Acquisition | Elite B2B Lead Generation Engine" />
+    <meta
+      property="og:description"
+      content="High-ticket B2B acquisition systems engineered for predictable revenue growth."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://t-acquisition.com/" />
+    <meta property="og:image" content="./assets/og-cover.svg" />
+    <link rel="canonical" href="https://t-acquisition.com/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="#home">TEAM Acquisition</a>
+        <nav class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#roi">ROI Calculator</a>
+          <a href="#contact">Appointment</a>
+        </nav>
+        <button class="btn btn-outline" data-scroll="#contact">Book Strategy Call</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero container reveal">
+        <p class="eyebrow">Elite SDR Hub Madagascar + Starlink Continuity</p>
+        <h1>
+          Engineer a Presidential-Grade B2B Pipeline
+          <span class="gold">with Surgical Precision</span>
+        </h1>
+        <p class="hero-copy">
+          TEAM Acquisition builds high-ticket outbound systems for ambitious B2B brands. We
+          combine C-suite access, data-enriched targeting, and SDR execution to create predictable
+          growth.
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-gold" data-scroll="#roi">Calculate Your Growth</button>
+          <a class="btn btn-dark" href="https://www.linkedin.com/in/wells-todison" target="_blank" rel="noreferrer">
+            Discuss with Wells on LinkedIn
+          </a>
+        </div>
+      </section>
+
+      <section id="services" class="container reveal">
+        <div class="section-head">
+          <p class="eyebrow">The Elite Solutions</p>
+          <h2>Premium B2B Acquisition Services</h2>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h3>C-Suite Connection</h3>
+            <p>High-level outbound campaigns that open conversations with decision-makers.</p>
+          </article>
+          <article class="card">
+            <h3>Data Enrichment</h3>
+            <p>Surgical lead-list engineering with firmographic and intent-layer precision.</p>
+          </article>
+          <article class="card">
+            <h3>SDR-as-a-Service</h3>
+            <p>Scalable outbound teams from Madagascar, designed for speed and continuity.</p>
+          </article>
+          <article class="card">
+            <h3>2026 Outbound Trends</h3>
+            <p>Lead magnet campaign framework to attract and nurture premium prospects.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="roi" class="container reveal">
+        <div class="section-head">
+          <p class="eyebrow">B2B Growth Diagnostic</p>
+          <h2>Gold ROI Calculator</h2>
+        </div>
+        <div class="calculator card">
+          <div class="steps">
+            <span class="step active" data-step="1">1. Inputs</span>
+            <span class="step" data-step="2">2. Analysis</span>
+            <span class="step" data-step="3">3. Results</span>
+          </div>
+
+          <form id="roi-form" class="roi-grid">
+            <label>
+              Monthly Lead Goal
+              <input id="leadGoal" type="number" min="1" value="60" required />
+            </label>
+            <label>
+              Current Close Rate (%)
+              <input id="closeRate" type="number" min="1" max="100" value="12" required />
+            </label>
+            <label>
+              Average Contract Value ($)
+              <input id="contractValue" type="number" min="100" value="15000" required />
+            </label>
+            <button type="submit" class="btn btn-gold">Run Strategic Analysis</button>
+          </form>
+
+          <div id="analysis-loader" class="loader hidden">
+            <p>Loading Strategic Analysis...</p>
+            <div class="loader-bar"></div>
+          </div>
+
+          <div id="roi-results" class="results hidden">
+            <div class="metrics">
+              <div class="metric">
+                <p>Baseline Monthly Revenue</p>
+                <strong id="baselineRevenue">$0</strong>
+              </div>
+              <div class="metric">
+                <p>Optimized Monthly Revenue</p>
+                <strong id="optimizedRevenue">$0</strong>
+              </div>
+              <div class="metric">
+                <p>Projected Annual Growth</p>
+                <strong id="annualGrowth">$0</strong>
+              </div>
+            </div>
+
+            <form id="lead-capture-form" class="lead-form">
+              <h3>Unlock Full Revenue Blueprint</h3>
+              <label>
+                Business Email
+                <input id="leadEmail" type="email" required />
+              </label>
+              <label>
+                LinkedIn Profile URL
+                <input id="leadLinkedin" type="url" placeholder="https://www.linkedin.com/in/your-profile/" required />
+              </label>
+              <div class="form-actions">
+                <button type="submit" class="btn btn-gold">Get Full Report</button>
+                <a
+                  id="linkedinDynamicBtn"
+                  class="btn btn-outline"
+                  href="https://www.linkedin.com/in/wells-todison"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Discuss this ROI with Wells on LinkedIn
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="container reveal">
+        <div class="section-head">
+          <p class="eyebrow">Conversion Engine</p>
+          <h2>Lead Capture & Appointment</h2>
+        </div>
+        <form id="appointment-form" class="card appointment-grid">
+          <label>
+            Full Name
+            <input name="name" type="text" required />
+          </label>
+          <label>
+            Work Email
+            <input name="email" type="email" required />
+          </label>
+          <label>
+            Company
+            <input name="company" type="text" required />
+          </label>
+          <label>
+            Monthly Revenue Goal ($)
+            <input name="goal" type="number" min="1000" required />
+          </label>
+          <label class="full">
+            Strategic Priority
+            <textarea name="priority" rows="4" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-gold">Request Executive Consultation</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>© <span id="year"></span> TEAM Acquisition. All rights reserved.</p>
+        <div>
+          <a href="https://www.linkedin.com/in/wells-todison" target="_blank" rel="noreferrer">Founder LinkedIn</a>
+          <a href="https://www.linkedin.com/company/team-acquisition/" target="_blank" rel="noreferrer">Company LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>
