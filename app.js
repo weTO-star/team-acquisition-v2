@@ -9,12 +9,6 @@ function formatCurrency(value) {
   }).format(value);
 }
 
-function setActiveStep(step) {
-  qsa(".step").forEach((el) => {
-    el.classList.toggle("active", Number(el.dataset.step) === step);
-  });
-}
-
 function calculateROI({ leadGoal, closeRate, contractValue }) {
   const improvedCloseRate = closeRate * 1.35;
   const baselineMonthlyRevenue = leadGoal * (closeRate / 100) * contractValue;
@@ -63,24 +57,41 @@ function setupROICalculator() {
   const optimizedEl = qs("#optimizedRevenue");
   const annualEl = qs("#annualGrowth");
   const linkedinBtn = qs("#linkedinDynamicBtn");
+  const leadGoalRange = qs("#leadGoalRange");
+  const closeRateRange = qs("#closeRateRange");
+  const contractRange = qs("#contractRange");
+  const leadGoalValue = qs("#leadGoalValue");
+  const closeRateValue = qs("#closeRateValue");
+  const contractValueEl = qs("#contractValue");
 
   let latestRoi = { annualGrowth: 0 };
 
+  const syncSliderValues = () => {
+    if (leadGoalValue && leadGoalRange) leadGoalValue.textContent = leadGoalRange.value;
+    if (closeRateValue && closeRateRange) closeRateValue.textContent = closeRateRange.value;
+    if (contractValueEl && contractRange) {
+      contractValueEl.textContent = Number(contractRange.value).toLocaleString();
+    }
+  };
+
+  [leadGoalRange, closeRateRange, contractRange].forEach((el) => {
+    el?.addEventListener("input", syncSliderValues);
+  });
+  syncSliderValues();
+
   form?.addEventListener("submit", (event) => {
     event.preventDefault();
-    const leadGoal = Number(qs("#leadGoal")?.value || 0);
-    const closeRate = Number(qs("#closeRate")?.value || 0);
-    const contractValue = Number(qs("#contractValue")?.value || 0);
+    const leadGoal = Number(leadGoalRange?.value || 0);
+    const closeRate = Number(closeRateRange?.value || 0);
+    const contractValue = Number(contractRange?.value || 0);
 
     const roi = calculateROI({ leadGoal, closeRate, contractValue });
     latestRoi = roi;
 
-    setActiveStep(2);
     loader?.classList.remove("hidden");
     results?.classList.add("hidden");
 
     window.setTimeout(() => {
-      setActiveStep(3);
       loader?.classList.add("hidden");
       results?.classList.remove("hidden");
       if (baselineEl) baselineEl.textContent = formatCurrency(roi.baselineMonthlyRevenue);
@@ -99,12 +110,10 @@ function setupROICalculator() {
   qs("#lead-capture-form")?.addEventListener("submit", (event) => {
     event.preventDefault();
     const email = qs("#leadEmail")?.value || "";
-    const linkedin = qs("#leadLinkedin")?.value || "";
 
     const leadPayload = {
       source: "roi-calculator",
       email,
-      linkedin,
       roi: latestRoi,
       timestamp: new Date().toISOString(),
     };
